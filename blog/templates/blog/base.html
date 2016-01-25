@@ -8,6 +8,9 @@
         <title>My blog</title>
     </head>
     <body>
+        {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
         <div class="page-header">
     <h1><a href="/">Passion For Proffesion</a></h1>
         </div>
